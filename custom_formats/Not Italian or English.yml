@@ -1,0 +1,28 @@
+ name: Not Italian or English
+ description: Matches releases that don't include Italian or English language tracks, unless dual audio is inferred.
+ tags:
+ - Language
+ conditions:
+ - language: italian
+   negate: true
+   required: true
+   type: language
+ - language: english
+   negate: true
+   required: true
+   type: language
+ - pattern: Dual Audio
+   negate: true
+   required: true
+   type: release_title
+ tests:
+ - expected: false
+   input: Movie.2023.ITA-ENG.1080p.BluRay
+ - expected: false
+   input: Movie.2023.ITA.1080p.BluRay
+ - expected: false
+   input: Movie.2023.ENG.1080p.BluRay
+ - expected: true
+   input: Movie.2023.FRA.1080p.BluRay
+ - expected: false
+   input: Movie.2023.Dual.Audio.1080p.BluRay

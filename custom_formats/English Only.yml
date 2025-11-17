@@ -1,0 +1,22 @@
+name: English Only
+description: Matches releases that include English language track but exclude Italian.
+tags:
+- Language
+conditions:
+- language: english
+  negate: false
+  required: true
+  type: language
+- language: italian
+  negate: true
+  required: true
+  type: language
+tests:
+- expected: false
+  input: Movie.2023.ITA-ENG.1080p.BluRay
+- expected: false
+  input: Movie.2023.ITA.1080p.BluRay
+- expected: true
+  input: Movie.2023.ENG.1080p.BluRay
+- expected: false
+  input: Movie.2023.FRA.1080p.BluRay
