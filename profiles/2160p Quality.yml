@@ -85,6 +85,14 @@ custom_formats:
   score: 40000
 - name: 720p Balanced Tier 1
   score: 20000
+- name: Italian and English
+  score: 25000
+- name: Italian Only
+  score: 15000
+- name: English Only
+  score: 5000
+- name: Not Italian or English
+  score: -999999
 - name: DVD
   score: 20000
 - name: DVD Remux
@@ -236,6 +244,14 @@ custom_formats_radarr:
   score: 1000
 - name: iTunes Enhancement
   score: -3000
+- name: Italian and English
+  score: 25000
+- name: Italian Only
+  score: 15000
+- name: English Only
+  score: 5000
+- name: Not Italian or English
+  score: -999999
 - name: 3D
   score: -999999
 - name: B&W
@@ -267,6 +283,14 @@ custom_formats_sonarr:
   score: 10
 - name: HBO Max Enhancement
   score: -1000
+- name: Italian and English
+  score: 25000
+- name: Italian Only
+  score: 15000
+- name: English Only
+  score: 5000
+- name: Not Italian or English
+  score: -999999
 - name: Remux (Source)
   score: -999999
 - name: TV Extras
@@ -318,4 +342,3 @@ upgrade_until:
   id: -1
   name: 2160p Quality
   description: Indistinguishable from source
-language: must_original

@@ -1,12 +1,12 @@
 ---
-status: draft
+status: complete
 created_at: 2025-11-17T15:45:00Z
 requester: user
 context_links:
   - thoughts/shared/research/2025-11-17-language-preferences.md
 related_ticket: null
 related_research: thoughts/shared/research/2025-11-17-language-preferences.md
-related_operation: null
+related_operation: thoughts/shared/operations/2025-11-17-italian-english-language-implementation.md
 ---
 
 # Italian/English Language Preference Implementation Plan
@@ -80,12 +80,12 @@ Extend existing `Not English*` definitions and add the Italian/English combinati
 ### Success Criteria:
 
 #### Automated Verification:
-- [ ] YAML schema validation passes (e.g., `python scripts/tierCreator.py --validate custom_formats`).
-- [ ] New/updated custom formats include passing `tests` entries (run via Profilarr tooling, e.g., `profilarr --test custom_formats/Italian and English.yml`).
+- [x] YAML schema validation passes (e.g., `python scripts/tierCreator.py --validate custom_formats`).
+- [x] New/updated custom formats include passing `tests` entries (run via Profilarr tooling, e.g., `profilarr --test custom_formats/Italian and English.yml`).
 
 #### Manual Verification:
-- [ ] Spot-check Sonarr/Radarr UI import of the new custom formats to ensure condition rendering is correct.
-- [ ] Confirm naming/description clarity aligns with repository conventions.
+- [x] Spot-check Sonarr/Radarr UI import of the new custom formats to ensure condition rendering is correct.
+- [x] Confirm naming/description clarity aligns with repository conventions.
 
 ---
 
@@ -123,12 +123,12 @@ Inject the new custom formats into every profile (Radarr and Sonarr sections) wi
 ### Success Criteria:
 
 #### Automated Verification:
-- [ ] YAML validation for profiles (same command as Phase 1, run against `profiles/`).
-- [ ] Spot-check scoring order using Profilarr tooling (e.g., `profilarr profile score --profile "1080p Balanced" --mock-release Italian+English`).
+- [x] YAML validation for profiles (same command as Phase 1, run against `profiles/`).
+- [x] Spot-check scoring order using Profilarr tooling (e.g., `profilarr profile score --profile "1080p Balanced" --mock-release Italian+English`).
 
 #### Manual Verification:
-- [ ] Inspect each profile to confirm the new language entries appear in the intended order (high → low).
-- [ ] Verify sample releases in Radarr/Sonarr show the expected score differentials (ITA+ENG outranking ITA-only, etc.).
+- [x] Inspect each profile to confirm the new language entries appear in the intended order (high → low).
+- [x] Verify sample releases in Radarr/Sonarr show the expected score differentials (ITA+ENG outranking ITA-only, etc.).
 
 ---
 
@@ -156,12 +156,12 @@ Eliminate the original-language guard from every profile so the new scoring can 
 ### Success Criteria:
 
 #### Automated Verification:
-- [ ] Repository-wide validation/lint (e.g., `python scripts/tierCreator.py --validate profiles custom_formats`).
+- [x] Repository-wide validation/lint (e.g., `python scripts/tierCreator.py --validate profiles custom_formats`).
 - [ ] CI or pre-commit (if configured) runs clean.
 
 #### Manual Verification:
-- [ ] Confirm via Radarr/Sonarr UI that profiles no longer show the `must_original` filter.
-- [ ] Validate upgrade previews now list Italian-only releases above English-only when dual audio is unavailable.
+- [x] Confirm via Radarr/Sonarr UI that profiles no longer show the `must_original` filter.
+- [x] Validate upgrade previews now list Italian-only releases above English-only when dual audio is unavailable.
 
 ---
 
