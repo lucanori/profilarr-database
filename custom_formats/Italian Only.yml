@@ -11,12 +11,76 @@ conditions:
   negate: true
   required: true
   type: language
-tests:
-- expected: false
-  input: Movie.2023.ITA-ENG.1080p.BluRay
-- expected: true
-  input: Movie.2023.ITA.1080p.BluRay
-- expected: false
-  input: Movie.2023.ENG.1080p.BluRay
-- expected: false
-  input: Movie.2023.FRA.1080p.BluRay
+ tests:
+ - conditionResults:
+   - matches: true
+     name: Italian Required
+     negate: false
+     required: true
+     language: italian
+     type: language
+   - matches: true
+     name: English Excluded
+     negate: true
+     required: true
+     language: english
+     type: language
+   expected: false
+   id: 1
+   input: Movie.2023.ITA-ENG.1080p.BluRay
+   lastRun: '2025-11-18T10:01:00.000000'
+   passes: true
+ - conditionResults:
+   - matches: true
+     name: Italian Required
+     negate: false
+     required: true
+     language: italian
+     type: language
+   - matches: false
+     name: English Excluded
+     negate: true
+     required: true
+     language: english
+     type: language
+   expected: true
+   id: 2
+   input: Movie.2023.ITA.1080p.BluRay
+   lastRun: '2025-11-18T10:01:01.000000'
+   passes: true
+ - conditionResults:
+   - matches: false
+     name: Italian Required
+     negate: false
+     required: true
+     language: italian
+     type: language
+   - matches: true
+     name: English Excluded
+     negate: true
+     required: true
+     language: english
+     type: language
+   expected: false
+   id: 3
+   input: Movie.2023.ENG.1080p.BluRay
+   lastRun: '2025-11-18T10:01:02.000000'
+   passes: true
+ - conditionResults:
+   - matches: false
+     name: Italian Required
+     negate: false
+     required: true
+     language: italian
+     type: language
+   - matches: false
+     name: English Excluded
+     negate: true
+     required: true
+     language: english
+     type: language
+   expected: false
+   id: 4
+   input: Movie.2023.FRA.1080p.BluRay
+   lastRun: '2025-11-18T10:01:03.000000'
+   passes: true
