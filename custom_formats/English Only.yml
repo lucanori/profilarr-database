@@ -3,15 +3,15 @@ description: Matches releases that include English language track but exclude It
 tags:
 - Language
 conditions:
-- language: english
-  negate: false
-  required: true
-  type: language
-- language: italian
-  negate: true
-  required: true
-  type: language
- tests:
+  - language: english
+    negate: false
+    required: true
+    type: language
+  - language: italian
+    negate: true
+    required: true
+    type: language
+tests:
  - conditionResults:
    - matches: true
      name: English Required
@@ -25,11 +25,11 @@ conditions:
      required: true
      language: italian
      type: language
-   expected: false
-   id: 1
-   input: Movie.2023.ITA-ENG.1080p.BluRay
-   lastRun: '2025-11-18T10:02:00.000000'
-   passes: true
+     expected: false
+     id: 1
+     input: Movie.2023.ITA-ENG.1080p.BluRay
+     lastRun: '2025-11-18T10:02:00.000000'
+     passes: true
  - conditionResults:
    - matches: false
      name: English Required
@@ -43,11 +43,11 @@ conditions:
      required: true
      language: italian
      type: language
-   expected: false
-   id: 2
-   input: Movie.2023.ITA.1080p.BluRay
-   lastRun: '2025-11-18T10:02:01.000000'
-   passes: true
+     expected: false
+     id: 2
+     input: Movie.2023.ITA.1080p.BluRay
+     lastRun: '2025-11-18T10:02:01.000000'
+     passes: true
  - conditionResults:
    - matches: true
      name: English Required
@@ -61,11 +61,11 @@ conditions:
      required: true
      language: italian
      type: language
-   expected: true
-   id: 3
-   input: Movie.2023.ENG.1080p.BluRay
-   lastRun: '2025-11-18T10:02:02.000000'
-   passes: true
+     expected: true
+     id: 3
+     input: Movie.2023.ENG.1080p.BluRay
+     lastRun: '2025-11-18T10:02:02.000000'
+     passes: true
  - conditionResults:
    - matches: false
      name: English Required
@@ -79,8 +79,8 @@ conditions:
      required: true
      language: italian
      type: language
-   expected: false
-   id: 4
-   input: Movie.2023.FRA.1080p.BluRay
-   lastRun: '2025-11-18T10:02:03.000000'
-   passes: true
+     expected: false
+     id: 4
+     input: Movie.2023.FRA.1080p.BluRay
+     lastRun: '2025-11-18T10:02:03.000000'
+     passes: true
