@@ -73,7 +73,7 @@ custom_formats:
   score: 15000
 - name: English Only
   score: 5000
-- name: Not Italian or English
+- name: Not Italian or English (Strict)
   score: -999999
 - name: DVD
   score: 20000
@@ -216,7 +216,7 @@ custom_formats_radarr:
   score: 15000
 - name: English Only
   score: 5000
-- name: Not Italian or English
+- name: Not Italian or English (Strict)
   score: -999999
 - name: 3D
   score: -999999
@@ -255,7 +255,7 @@ custom_formats_sonarr:
   score: 15000
 - name: English Only
   score: 5000
-- name: Not Italian or English
+- name: Not Italian or English (Strict)
   score: -999999
 - name: Remux (Source)
   score: -999999
