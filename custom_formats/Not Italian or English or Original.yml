@@ -1,17 +1,23 @@
-name: Not Italian or English (Strict)
+name: Not Italian or English or Original
 description: Strictly matches releases that don't include both Italian and English language tracks, with no allowances for dual audio.
 tags:
 - Language
 conditions:
 - exceptLanguage: false
   language: italian
-  name: Includes Italian
+  name: Doesn't includes Italian
   negate: true
   required: true
   type: language
 - exceptLanguage: false
   language: english
-  name: Includes English
+  name: Doesn't includes English
+  negate: true
+  required: true
+  type: language
+- exceptLanguage: false
+  language: original
+  name: Doesn't includes Original
   negate: true
   required: true
   type: language
