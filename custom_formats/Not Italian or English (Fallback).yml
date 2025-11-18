@@ -1,162 +1,162 @@
-      name: Not Italian or English (Fallback)
+name: Not Italian or English (Fallback)
 description: Matches releases that don't include both Italian and English language tracks, using fallback detection for dual audio.
 tags:
-    -  Language
+  - Language
 conditions:
-      -        language: italian
-          negate: true
-          required: true
-          type: language
-      -        language: english
-          negate: true
-          required: true
-          type: language
-      -        pattern: Dual Audio
-          negate: true
-          required: true
-          type: release_title
+  - language: italian
+    negate: true
+    required: true
+    type: language
+  - language: english
+    negate: true
+    required: true
+    type: language
+  - pattern: Dual Audio
+    negate: true
+    required: true
+    type: release_title
 tests:
-      -  conditionResults:
-          -        matches: false
-              name: Italian Excluded
-              negate: true
-              required: true
-              language: italian
-              type: language
-          -        matches: false
-              name: English Excluded
-              negate: true
-              required: true
-              language: english
-              type: language
-          -        matches: true
-              name: Dual Audio Regex
-              negate: true
-              pattern: Dual Audio
-              required: true
-              type: release_title
-      expected: false
-      id: 1
-      input: Movie.2023.ITA    - ENG.1080p.BluRay
-      lastRun: '2025    - 11    - 18T10:05:00.000000'
-      passes: true
-      -  conditionResults:
-          -        matches: true
-              name: Italian Excluded
-              negate: true
-              required: true
-              language: italian
-              type: language
-          -        matches: true
-              name: English Excluded
-              negate: true
-              required: true
-              language: english
-              type: language
-          -        matches: false
-              name: Dual Audio Regex
-              negate: true
-              pattern: Dual Audio
-              required: true
-              type: release_title
-      expected: false
-      id: 2
-      input: Movie.2023.Dual.Audio.1080p.BluRay
-      lastRun: '2025    - 11    - 18T10:05:01.000000'
-      passes: true
-      -  conditionResults:
-          -        matches: false
-              name: Italian Excluded
-              negate: true
-              required: true
-              language: italian
-              type: language
-          -        matches: true
-              name: English Excluded
-              negate: true
-              required: true
-              language: english
-              type: language
-          -        matches: true
-              name: Dual Audio Regex
-              negate: true
-              pattern: Dual Audio
-              required: true
-              type: release_title
-      expected: true
-      id: 3
-      input: Movie.2023.ITA.1080p.BluRay
-      lastRun: '2025    - 11    - 18T10:05:02.000000'
-      passes: false
-      -  conditionResults:
-          -        matches: true
-              name: Italian Excluded
-              negate: true
-              required: true
-              language: italian
-              type: language
-          -        matches: false
-              name: English Excluded
-              negate: true
-              required: true
-              language: english
-              type: language
-          -        matches: true
-              name: Dual Audio Regex
-              negate: true
-              pattern: Dual Audio
-              required: true
-              type: release_title
-      expected: true
-      id: 4
-      input: Movie.2023.ENG.1080p.BluRay
-      lastRun: '2025    - 11    - 18T10:05:03.000000'
-      passes: false
-      -  conditionResults:
-          -        matches: true
-              name: Italian Excluded
-              negate: true
-              required: true
-              language: italian
-              type: language
-          -        matches: true
-              name: English Excluded
-              negate: true
-              required: true
-              language: english
-              type: language
-          -        matches: true
-              name: Dual Audio Regex
-              negate: true
-              pattern: Dual Audio
-              required: true
-              type: release_title
-      expected: true
-      id: 5
-      input: Movie.2023.FRA.1080p.BluRay
-      lastRun: '2025    - 11    - 18T10:05:04.000000'
-      passes: true
-      -  conditionResults:
-          -        matches: false
-              name: Italian Excluded
-              negate: true
-              required: true
-              language: italian
-              type: language
-          -        matches: true
-              name: English Excluded
-              negate: true
-              required: true
-              language: english
-              type: language
-          -        matches: false
-              name: Dual Audio Regex
-              negate: true
-              pattern: Dual Audio
-              required: true
-              type: release_title
-      expected: false
-      id: 6
-      input: Movie.2023.ITA.Dual.Audio.1080p.BluRay
-      lastRun: '2025    - 11    - 18T10:05:05.000000'
-      passes: true
+  - conditionResults:
+      - matches: false
+        name: Italian Excluded
+        negate: true
+        required: true
+        language: italian
+        type: language
+      - matches: false
+        name: English Excluded
+        negate: true
+        required: true
+        language: english
+        type: language
+      - matches: true
+        name: Dual Audio Regex
+        negate: true
+        pattern: Dual Audio
+        required: true
+        type: release_title
+    expected: false
+    id: 1
+    input: Movie.2023.ITA    - ENG.1080p.BluRay
+    lastRun: '2025    - 11    - 18T10:05:00.000000'
+    passes: true
+  - conditionResults:
+      - matches: true
+        name: Italian Excluded
+        negate: true
+        required: true
+        language: italian
+        type: language
+      - matches: true
+        name: English Excluded
+        negate: true
+        required: true
+        language: english
+        type: language
+      - matches: false
+        name: Dual Audio Regex
+        negate: true
+        pattern: Dual Audio
+        required: true
+        type: release_title
+    expected: false
+    id: 2
+    input: Movie.2023.Dual.Audio.1080p.BluRay
+    lastRun: '2025    - 11    - 18T10:05:01.000000'
+    passes: true
+  - conditionResults:
+      - matches: true
+        name: Italian Excluded
+        negate: true
+        required: true
+        language: italian
+        type: language
+      - matches: false
+        name: English Excluded
+        negate: true
+        required: true
+        language: english
+        type: language
+      - matches: true
+        name: Dual Audio Regex
+        negate: true
+        pattern: Dual Audio
+        required: true
+        type: release_title
+    expected: true
+    id: 3
+    input: Movie.2023.ITA.1080p.BluRay
+    lastRun: '2025    - 11    - 18T10:05:02.000000'
+    passes: false
+  - conditionResults:
+      - matches: true
+        name: Italian Excluded
+        negate: true
+        required: true
+        language: italian
+        type: language
+      - matches: true
+        name: English Excluded
+        negate: true
+        required: true
+        language: english
+        type: language
+      - matches: true
+        name: Dual Audio Regex
+        negate: true
+        pattern: Dual Audio
+        required: true
+        type: release_title
+    expected: true
+    id: 4
+    input: Movie.2023.ENG.1080p.BluRay
+    lastRun: '2025    - 11    - 18T10:05:03.000000'
+    passes: false
+  - conditionResults:
+      - matches: false
+        name: Italian Excluded
+        negate: true
+        required: true
+        language: italian
+        type: language
+      - matches: true
+        name: English Excluded
+        negate: true
+        required: true
+        language: english
+        type: language
+      - matches: false
+        name: Dual Audio Regex
+        negate: true
+        pattern: Dual Audio
+        required: true
+        type: release_title
+    expected: false
+    id: 5
+    input: Movie.2023.FRA.1080p.BluRay
+    lastRun: '2025    - 11    - 18T10:05:04.000000'
+    passes: true
+  - conditionResults:
+      - matches: false
+        name: Italian Excluded
+        negate: true
+        required: true
+        language: italian
+        type: language
+      - matches: true
+        name: English Excluded
+        negate: true
+        required: true
+        language: english
+        type: language
+      - matches: false
+        name: Dual Audio Regex
+        negate: true
+        pattern: Dual Audio
+        required: true
+        type: release_title
+    expected: false
+    id: 6
+    input: Movie.2023.ITA.Dual.Audio.1080p.BluRay
+    lastRun: '2025    - 11    - 18T10:05:05.000000'
+    passes: true
