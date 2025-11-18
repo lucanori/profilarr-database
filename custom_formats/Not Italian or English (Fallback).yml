@@ -12,6 +12,7 @@ conditions:
     required: true
     type: language
   - pattern: Dual Audio
+    name: Dual Audio Regex
     negate: true
     required: true
     type: release_title
