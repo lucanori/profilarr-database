@@ -6,7 +6,7 @@ conditions:
 - exceptLanguage: false
   language: english
   name: Includes English
-  negate: true
+  negate: false
   required: true
   type: language
 tests: []

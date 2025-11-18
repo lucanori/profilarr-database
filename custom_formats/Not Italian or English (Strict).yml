@@ -3,13 +3,13 @@ description: Strictly matches releases that don't include both Italian and Engli
 tags:
 - Language
 conditions:
-- exceptLanguage: true
+- exceptLanguage: false
   language: italian
   name: Includes Italian
   negate: true
   required: true
   type: language
-- exceptLanguage: true
+- exceptLanguage: false
   language: english
   name: Includes English
   negate: true
