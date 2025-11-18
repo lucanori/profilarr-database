@@ -7,6 +7,8 @@ type(component): Description
 [Optional body]
 ```
 
+ Keep commits atomic and focused on a single logical change to make reviews and rollbacks easier. Always follow the commit format `type(component): description` with concise, intent-driven descriptions (more on that later).
+
 ## Types and Components
 
 ### Change Types
@@ -17,6 +19,8 @@ type(component): Description
 | `add`    | Adding entries to existing systems                 | `add(format): de[42] as Tier 4 GPPi group`         |
 | `tweak`  | Fine-tuning and adjustments to existing components | `tweak(format): Better h265 parsing for 1080p WEB` |
 | `fix`    | Corrections and bug fixes                          | `fix(regex): Required negation for remux pattern`  |
+
+Provide concrete examples such as `tweak(format): Increase HDR10+ score to prioritize over standard HDR` to illustrate the change's impact.
 
 ### Components
 
