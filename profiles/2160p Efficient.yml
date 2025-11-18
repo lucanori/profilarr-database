@@ -372,7 +372,7 @@ qualities:
   - id: 22
     name: DVD
 upgrade_until:
-  id: -1
+  id: -4
   name: 2160p Efficient
   description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
     majority of releases, but there are occasional streaming optimised encodes that
