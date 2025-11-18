@@ -3,12 +3,10 @@ description: Matches releases that include English language track but exclude It
 tags:
 - Language
 conditions:
-  - language: english
-    negate: false
-    required: true
-    type: language
-  - language: italian
-    negate: true
-    required: true
-    type: language
+- exceptLanguage: false
+  language: english
+  name: Includes English
+  negate: true
+  required: true
+  type: language
 tests: []

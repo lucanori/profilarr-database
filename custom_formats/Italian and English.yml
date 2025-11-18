@@ -3,12 +3,16 @@ description: Matches releases that include both Italian and English language tra
 tags:
 - Language
 conditions:
-  - language: italian
-    negate: false
-    required: true
-    type: language
-  - language: english
-    negate: false
-    required: true
-    type: language
+- exceptLanguage: false
+  language: italian
+  name: Includes Italian
+  negate: true
+  required: true
+  type: language
+- exceptLanguage: false
+  language: english
+  name: Includes English
+  negate: true
+  required: true
+  type: language
 tests: []
