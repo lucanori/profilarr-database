@@ -17,7 +17,7 @@ tags:
 - x265
 upgradesAllowed: true
 minCustomFormatScore: 20000
-upgradeUntilScore: 400000
+upgradeUntilScore: 500000
 minScoreIncrement: 1
 custom_formats:
 - name: 2160p Balanced Tier 1
@@ -165,7 +165,7 @@ custom_formats:
 - name: h265 (Efficient)
   score: -999999
 - name: Lossless Audio
-  score: -999999
+  score: -25000
 - name: Remux
   score: -999999
 - name: UHD Bluray (Efficient)
