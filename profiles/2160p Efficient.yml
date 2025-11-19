@@ -61,9 +61,9 @@ custom_formats:
 - name: 720p Balanced Tier 1
   score: 20000
 - name: Italian and English
-  score: 25000
+  score: 125000
 - name: Italian Only
-  score: 15000
+  score: 50000
 - name: English Only
   score: 5000
 - name: Not Italian or English or Original
@@ -228,9 +228,9 @@ custom_formats_radarr:
 - name: iTunes Enhancement
   score: -3000
 - name: Italian and English
-  score: 25000
+  score: 125000
 - name: Italian Only
-  score: 15000
+  score: 50000
 - name: English Only
   score: 5000
 - name: Not Italian or English or Original
@@ -313,9 +313,9 @@ custom_formats_sonarr:
 - name: HBO Max Enhancement
   score: -1000
 - name: Italian and English
-  score: 25000
+  score: 125000
 - name: Italian Only
-  score: 15000
+  score: 50000
 - name: English Only
   score: 5000
 - name: Not Italian or English or Original
